@@ -1,0 +1,15 @@
+
+
+.player1 {
+	background-color: #ffc04d;
+	padding: 10px;
+	display: inline-block;
+	border-radius: 12px;
+}
+
+.player2 {
+	background-color: #4d8cff;
+	padding: 10px;
+	display: inline-block;
+	border-radius: 12px;
+}
