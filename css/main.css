@@ -13,3 +13,9 @@
 	display: inline-block;
 	border-radius: 12px;
 }
+
+.bg-1 {
+	background-color: #4dffc0;
+	border-radius: 12px;
+	border-top: 2px solid black;
+}

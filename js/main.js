@@ -42,5 +42,81 @@ if(player1.score() > player2.score()) {
 	document.getElementById('winner').innerText = player2.name + " Wins!";
 }
 
-
 };
+
+
+
+
+
+
+/* in for Loops and TypeOf  Create Reciept*/
+
+function welcome(){
+
+	var object = {
+		firstName: "Marcus",
+		lastName: "Del Bianco",
+		fullName: function() {
+			return "Welcome " + this.firstName + " " + this.lastName;
+		}
+	}
+
+	for(prop in object) {
+		if(typeof(object[prop]) == 'function'){
+			welcome1.innerText =  object[prop](); 
+			console.log(object[prop]())
+		}else{
+			welcome1.innerText = object[prop];
+			console.log(object[prop])
+		}
+	}
+
+}
+
+
+/* Constructor functions */
+
+var student = {
+		firstName: "Marcus",
+		lastName: "Del Bianco",
+		fullName: function() {
+			return  this.firstName + " " + this.lastName + " is a student.";
+		}
+	}
+
+
+// Create a new object
+
+function Student(first, last){
+	this.firstName = first;
+	this.lastName = last;
+	this.fullName = (function(a,b) {
+			return  a + b ;
+		})(this.firstName, this.lastName)
+};
+
+var newStudent = new Student('John', 'Jones');
+
+console.log(newStudent);
+
+
+
+this.fullName = (function(a,b) {
+			return  a + b ;
+		})(this.firstName, this.lastName)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
