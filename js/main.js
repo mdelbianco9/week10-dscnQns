@@ -87,13 +87,26 @@ var student = {
 
 // Create a new object
 
+var array = [];
+
 function Student(first, last){
 	this.firstName = first;
 	this.lastName = last;
 	this.fullName = (function(a,b) {
 			return  a + b ;
 		})(this.firstName, this.lastName)
+
+	pushToArray(array, this);
 };
+
+
+function pushToArray(array, item){
+	array.push(item);
+}
+
+
+
+
 
 var newStudent = new Student('John', 'Jones');
 
@@ -101,9 +114,6 @@ console.log(newStudent);
 
 
 
-this.fullName = (function(a,b) {
-			return  a + b ;
-		})(this.firstName, this.lastName)
 
 
 
