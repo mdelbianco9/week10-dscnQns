@@ -62,11 +62,9 @@ function welcome(){
 	}
 
 	for(prop in object) {
-		if(typeof(object[prop]) == 'function'){
-			welcome1.innerText =  object[prop](); 
+		if(typeof(object[prop]) == 'function'){ 
 			console.log(object[prop]())
 		}else{
-			welcome1.innerText = object[prop];
 			console.log(object[prop])
 		}
 	}
@@ -105,12 +103,51 @@ function pushToArray(array, item){
 }
 
 
-
-
-
 var newStudent = new Student('John', 'Jones');
 
 console.log(newStudent);
+
+
+
+
+var student = {
+	first: 'Marcus',
+	last: 'Del Bianco',
+	fullName: function(){
+		return this.first + " " + this.last;
+	}
+}
+
+var array = [];
+
+// This function creates an object
+function Students(first, last){
+	this.first = first,
+	this.last = last,
+	this.fullName = function(){
+		return this.first + " " + this.last;
+	}
+
+	pushToArray(array, this);
+};
+
+function pushToArray(arr, object){
+	arr.push(object);
+}
+
+
+var obj1 = new Students('Bobby', "Bobs");
+var obj2 = new Students('Ralfiano', 'Bulgario');
+var obj3 = new Students('Kobe', 'Bryant');
+
+console.log(array);
+
+for(i=0; i<array.length; i++){
+	console.log(array[i].fullName());
+}
+
+
+
 
 
 
